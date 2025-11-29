@@ -1,7 +1,8 @@
 package core
 
 import core.entities.Entity
-import core.entities.Role
+import core.entities.roles.EnemyRole
+import core.entities.roles.CharacterRole
 import core.game.Game
 
 fun printAttacker(game: Game) {
@@ -10,8 +11,8 @@ fun printAttacker(game: Game) {
 }
 
 fun main() {
-    val entity1 = Entity("palecas", 500, Role.ATTACKER)
-    val entity2 = Entity("palex", 50, Role.DEFENDER)
+    val hero = Entity("Hero", 1, CharacterRole.Attacker, )
+    val entity2 = Entity("palex", 1, EnemyRole.Basic)
 
     var game = Game(entity1, entity2, true)
 

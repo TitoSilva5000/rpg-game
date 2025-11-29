@@ -1,11 +1,16 @@
 package core.entities
 
+import core.combat.Moveset
+import core.entities.roles.Role
+
 data class Entity (
     val name: String,
-    val level: Int,
+    val level: Int = 1,
     private val role: Role,
-    private val baseStats: Stats = Stats(),
-    val stats: Stats = baseStats + role.stats
+    val stats: Stats = role.stats,
+    val hasTurn: Boolean = true,
+    val moveSet: Moveset,
+
 ) {
 
     init {
@@ -17,4 +22,5 @@ data class Entity (
     fun updateStats(stats: Stats): Entity {
         return this.copy(stats = stats)
     }
+
 }
