@@ -1,6 +1,6 @@
 package core.combat
 
-import core.entities.Entity
+import core.entity.Entity
 
 interface Move {
     fun performMove(attacker: Entity, attacked: Entity): Pair<Entity, Entity>

@@ -1,10 +1,11 @@
 package core.game
 
-import core.entities.Entity
+import core.Player
+import core.entity.Entity
 
 data class Game (
-    val character: Entity,
-    val enemy: Entity,
+    val player: Player,
+    val enemySquad: List<Entity>,
 ) {
 
 

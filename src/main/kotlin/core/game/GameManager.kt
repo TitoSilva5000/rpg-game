@@ -1,6 +1,6 @@
 package core.game
 
-import core.entities.Entity
+import core.entity.Entity
 
 object GameManager {
     // Two separate lists: one for characters, one for enemies

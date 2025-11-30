@@ -1,17 +1,15 @@
-package core.entities
+package core.entity
 
 import core.combat.Moveset
-import core.entities.Role
 
 data class Entity (
     val name: String,
     val level: Int = 1,
     private val role: Role,
-    val stats: Stats = role.baseStats,
-    val hasTurn: Boolean = true,
     val moveSet: Moveset,
-
+    val stats: Stats = role.baseStats
 ) {
+    val hasTurn: Boolean = true
 
     init {
         require(level in 1..100) {

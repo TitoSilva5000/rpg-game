@@ -1,6 +1,6 @@
 package core.combat
 
-import core.entities.Entity
+import core.entity.Entity
 
 interface Ability {
     fun useAbility1(attacker: Entity, attacked: Entity): Pair<List<Entity>, List<Entity>>

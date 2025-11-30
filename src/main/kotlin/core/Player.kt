@@ -1,13 +1,9 @@
 package core
 
-import core.entities.Entity
-import core.entities.characters.CharacterRole
+import core.entity.Entity
 
-data class Player(
-    val team: List<Entity> = listOf<Entity>(
-        Entity("Hero", 1, CharacterRole.Attacker, ),
-        Entity("Mage", 1, CharacterRole.Defender)
-    )
-) {
-
+data class Player(val team: MutableList<Entity> = mutableListOf()) {
+    init {
+        require(team.size in 1..4) { InvalidTeam}
+    }
 }
