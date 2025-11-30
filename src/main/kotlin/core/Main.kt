@@ -1,8 +1,8 @@
 package core
 
 import core.entities.Entity
-import core.entities.roles.EnemyRole
-import core.entities.roles.CharacterRole
+import core.entities.enemies.EnemyRole
+import core.entities.characters.CharacterRole
 import core.game.Game
 
 fun printAttacker(game: Game) {
