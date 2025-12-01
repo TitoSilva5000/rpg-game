@@ -1,5 +1,6 @@
 package core.combat
 
+import core.combat.ability.Ability
 import core.entity.Entity
 
 data class Moveset(val abilities: Ability) {

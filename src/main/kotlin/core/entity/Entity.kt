@@ -1,15 +1,17 @@
 package core.entity
 
+import core.combat.Ability
 import core.combat.Moveset
+import core.entity.role.Role
 
-data class Entity (
+open class Entity (
     val name: String,
     val level: Int = 1,
     private val role: Role,
-    val moveSet: Moveset,
     val stats: Stats = role.baseStats
 ) {
-    val hasTurn: Boolean = true
+    private var turn: Boolean = true
+    val abilities = mutableListOf<Ability>()
 
     init {
         require(level in 1..100) {
@@ -18,7 +20,16 @@ data class Entity (
     }
 
     fun updateStats(stats: Stats): Entity {
-        return this.copy(stats = stats)
+        TODO()
+        //return this.copy(stats = stats)
+    }
+
+    fun changeTurn() {
+        turn = !turn
+    }
+
+    fun hasTurn(): Boolean {
+        return turn
     }
 
 }

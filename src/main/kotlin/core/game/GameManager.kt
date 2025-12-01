@@ -3,7 +3,6 @@ package core.game
 import core.entity.Entity
 
 object GameManager {
-    // Two separate lists: one for characters, one for enemies
     val characters = mutableListOf<Entity>()
     val enemies = mutableListOf<Entity>()
 

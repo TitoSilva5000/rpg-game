@@ -1,10 +1,10 @@
-package core.entity.characters
+package core.entity.role
 
 import core.entity.Stats
 
-class Defender : CharacterRole(
+object Defender : Role(
     name = "Defender",
-    stats = Stats(
+    baseStats = Stats(
         hp = 150,
         shld = 200,
         def = 100,

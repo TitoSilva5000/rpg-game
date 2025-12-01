@@ -1,10 +1,10 @@
-package core.entity.characters
+package core.entity.role
 
 import core.entity.Stats
 
-class Amplifier : CharacterRole(
+object Amplifier : Role(
     name = "Amplifier",
-    stats = Stats(
+    baseStats = Stats(
         atk = 100,
         critDmg = 80.0),
 )
